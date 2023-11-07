@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: auto;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+.subcon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fflex {
+    background-color: #30353c;
+    border: 1px solid black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 1px 1px 3rem black, -1px -1px 3rem black;
+}
+button {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 23px;
+    padding: 2px 4px;
+    border-radius: 10px;
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color:#30353c ;
+    border: 2px solid rgb(31, 31, 32);
+    color: #fff;
+    box-shadow: 1px 1px 0.4rem black, -1px -1px 0.4rem black;
+    text-align: center;
+}
+
+#eq {
+    background: #fb7c14;
+}
+#inputt {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    padding: 1.4rem 1.7rem;
+    /* border: 0.1px solid white; */
+    background-color: rgb(78, 77, 69);
+    color: white;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    text-align: right;
+    box-shadow: 1px 1px 0.5rem black inset, -1px -1px 0.5rem black inset;
+    border-radius: 6px;
+}
+#op {
+    color: #6dee0a;
+}
+@media screen and (max-width:390){
+    button{
+        font-size: 1.2rem;
+    }
+}
+

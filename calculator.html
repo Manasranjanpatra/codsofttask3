@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="fflex">
+            <div class="subcon">
+                <input type="text" placeholder="Enter" id="inputt" />
+            </div>
+            <div class="subcon">
+                <button class="but">%</button>
+                <button class="but" id="op">AC</button>
+                <button class="but" id="op">DEL</button>
+                <button class="but" id="op">*</button>
+            </div>
+            <div class="subcon">                          
+                <button class="but">(</button>
+                <button class="but">)</button>
+                <button class="but">0</button>
+                <button class="but" id="op">/</button>
+            </div>
+            <div class="subcon">
+                <button class="but">7</button>
+                <button class="but">8</button>
+                <button class="but">9</button>
+                <button class="but" id="op">-</button>
+            </div>
+            <div class="subcon">
+                <button class="but">4</button>
+                <button class="but">5</button>
+                <button class="but">6</button>
+                <button class="but" id="op">+</button>
+            </div>
+            <div class="subcon">
+                <button class="but">1</button>
+                <button class="but">2</button>
+                <button class="but">3</button>
+                <button class="but" id="eq">=</button>
+            </div>
+        </div>
+        <script>
+            let string = " ";
+            let buttons = document.querySelectorAll('.but');
+            Array.from(buttons).forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    if (e.target.innerHTML == '=') {
+                        string = eval(string);
+                        document.getElementById('inputt').value = string;
+                    }
+                    else if (e.target.innerHTML == 'AC') {
+                        string = " ";
+                        document.getElementById('inputt').value = string;
+                    }
+                    else if (e.target.innerHTML == 'DEL') {
+                        string = string.substring(0, string.length - 1);
+                        document.getElementById('inputt').value = string;
+                    }
+                    else {
+                        // console.log(e.target);
+                        string = string + e.target.innerHTML;
+                        document.getElementById('inputt').value = string;
+                    }
+                })
+            })
+        </script>
+
+</body>
+
+</html>
